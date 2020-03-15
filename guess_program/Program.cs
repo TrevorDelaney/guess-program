@@ -23,21 +23,21 @@ namespace guess_program
                     guess = Convert.ToInt32(Console.ReadLine());
                 } catch (FormatException)
                 {
-                    Console.WriteLine("The value entered must be a number. Try again!");
+                    Console.WriteLine("Incorrect, the value entered must be a number. Try again!");
                     continue;
                 }
 
                 // For the guess to be valid, it must be between 1 and 100.
                 if (guess < 1 || guess > 100)
                 {
-                    Console.WriteLine("The number must be between 1 and 100. Try again!");
+                    Console.WriteLine("Incorrect, the number must be between 1 and 100. Try again!");
                     continue;
                 }
 
                 if (guess == answer)
                 {
-                    Console.WriteLine("Congratulations, you win!");
-                    Console.WriteLine("Press 'Enter' to continue!");
+                    Console.WriteLine("Correct");
+                    Console.WriteLine("Press 'Enter' to end the program!");
                     Console.Read();
                     break;
                 } else {
